@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_project_facilities",
+  "info": {
+    "displayName": "Facility"
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

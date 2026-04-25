@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_project_house_types",
+  "info": {
+    "displayName": "House Type",
+    "description": "Unit type and commercial details"
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "size": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
