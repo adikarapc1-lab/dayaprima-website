@@ -6,7 +6,7 @@ export function Footer({ globals }) {
     <footer id="contact" className="bg-ink text-white">
       <div className="container-x grid gap-10 py-12 md:grid-cols-[1.3fr_1fr_1fr]">
         <div>
-          <p className="text-2xl font-semibold">Dayaprima</p>
+          <p className="text-2xl font-semibold">{globals.companyName}</p>
           <p className="mt-4 max-w-md text-sm leading-6 text-white/70">
             Developer hunian yang membangun kawasan bernilai, nyaman, dan mudah dijangkau untuk keluarga Indonesia.
           </p>
@@ -25,7 +25,7 @@ export function Footer({ globals }) {
         </div>
       </div>
       <div className="border-t border-white/10 py-5 text-center text-xs text-white/55">
-        &copy; {new Date().getFullYear()} Dayaprima. All rights reserved.
+        &copy; {new Date().getFullYear()} {globals.companyName}. All rights reserved.
       </div>
     </footer>
   );

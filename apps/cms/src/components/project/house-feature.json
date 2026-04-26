@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_project_house_features",
+  "info": {
+    "displayName": "House Feature"
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

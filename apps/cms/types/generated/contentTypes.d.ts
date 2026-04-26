@@ -559,6 +559,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     location: Schema.Attribute.String;
+    mapUrl: Schema.Attribute.Text;
     mapEmbedUrl: Schema.Attribute.Text;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;

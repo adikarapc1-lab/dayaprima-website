@@ -1,10 +1,10 @@
 export const sampleGlobals = {
-  companyName: "Dayaprima",
+  companyName: "Dayaprima Nusawisesa",
   tagline: "Hunian bernilai untuk keluarga yang tumbuh",
-  phone: "+62 812-3456-7890",
-  whatsapp: "6281234567890",
-  email: "hello@dayaprima.co.id",
-  address: "Makassar, Sulawesi Selatan",
+  phone: "0853-4190-9329",
+  whatsapp: "6285341909329",
+  email: "informasi@dayaprima.id",
+  address: "Ruko BTP, Jalan Pujasera Blok M No.3-4, Tamalanrea, Kec. Tamalanrea, Kota Makassar, Sulawesi Selatan 90245",
   socialLinks: [
     { label: "Instagram", url: "https://instagram.com/dayaprima" },
     { label: "Facebook", url: "https://facebook.com/dayaprima" }
@@ -13,40 +13,108 @@ export const sampleGlobals = {
 
 export const sampleProjects = [
   {
-    slug: "grand-dayaprima-residence",
-    name: "Grand Dayaprima Residence",
-    excerpt: "Cluster modern dekat pusat kota dengan akses harian yang praktis.",
-    description: "Grand Dayaprima Residence dirancang untuk keluarga muda yang menginginkan lingkungan tertata, akses mudah, dan pilihan tipe rumah yang fleksibel.",
+    slug: "nusa-harapan-permai",
+    name: "Nusa Harapan Permai",
+    excerpt: "Perumahan strategis di kawasan BTP, Makassar.",
+    description: "Nusa Harapan Permai berada di kawasan BTP, Makassar, tepatnya Kelurahan Katimbang, Kecamatan Biringkanaya. Lingkungan ini cocok untuk keluarga yang membutuhkan akses praktis menuju kawasan hunian, pendidikan, dan aktivitas harian di Makassar.",
     heroImage: "/images/dayaprima-hero.png",
+    promoBanner: "/images/promo-nusa-harapan-permai.png",
     gallery: ["/images/dayaprima-hero.png"],
-    location: "Kawasan strategis dekat sekolah, pusat belanja, dan jalan utama.",
-    mapEmbedUrl: "https://www.google.com/maps?q=Makassar&output=embed",
+    location: "BTP, Makassar (Kelurahan Katimbang, Kecamatan Biringkanaya).",
+    mapUrl: "https://maps.app.goo.gl/4VC8JhWmBoFMyPDg6",
+    mapEmbedUrl: "https://www.google.com/maps?q=Nusa%20Harapan%20Permai%20Makassar&output=embed",
     facilities: ["Gerbang cluster", "Taman lingkungan", "Drainase tertata", "Akses 24 jam"],
+    promo: {
+      priceStart: "408",
+      ppnStart: "34",
+      phone: "0853-4190-9329",
+      address: "Ruko BTP, Jalan Pujasera Blok M No.3-4, Tamalanrea, Makassar"
+    },
     featured: true,
     houseTypes: [
-      { name: "Type 36", size: "LT 72 / LB 36", price: "Mulai Rp 420 juta" },
-      { name: "Type 45", size: "LT 90 / LB 45", price: "Mulai Rp 560 juta" }
+      {
+        name: "Type 36",
+        slug: "type-36",
+        size: "LT 72 / LB 36",
+        price: "Mulai Rp 420 juta",
+        description: "Rumah kompak untuk keluarga muda dengan tata ruang efisien dan area pengembangan yang fleksibel.",
+        bedrooms: 2,
+        bathrooms: 1,
+        floors: 1,
+        carport: 1,
+        features: ["2 kamar tidur", "1 kamar mandi", "Ruang keluarga", "Dapur", "Carport", "Area taman depan"],
+        floorPlanImage: "/images/dayaprima-hero-2.png",
+        gallery: ["/images/dayaprima-hero.png", "/images/dayaprima-hero-2.png"]
+      },
+      {
+        name: "Type 45",
+        slug: "type-45",
+        size: "LT 90 / LB 45",
+        price: "Mulai Rp 560 juta",
+        description: "Hunian keluarga dengan ruang yang lebih lega, cocok untuk kebutuhan harian dan investasi jangka panjang.",
+        bedrooms: 2,
+        bathrooms: 1,
+        floors: 1,
+        carport: 1,
+        features: ["2 kamar tidur", "1 kamar mandi", "Ruang tamu", "Dapur", "Carport", "Halaman belakang"],
+        floorPlanImage: "/images/dayaprima-hero-3.png",
+        gallery: ["/images/dayaprima-hero.png", "/images/dayaprima-hero-3.png"]
+      }
     ],
-    seoTitle: "Grand Dayaprima Residence | Perumahan Modern Dayaprima",
-    seoDescription: "Perumahan modern Dayaprima dengan fasilitas lengkap, akses strategis, dan pilihan tipe rumah keluarga."
+    seoTitle: "Nusa Harapan Permai | Perumahan Dayaprima Nusawisesa di BTP Makassar",
+    seoDescription: "Nusa Harapan Permai adalah perumahan Dayaprima Nusawisesa di kawasan BTP, Makassar, Kelurahan Katimbang, Kecamatan Biringkanaya."
   },
   {
-    slug: "dayaprima-garden-town",
-    name: "Dayaprima Garden Town",
-    excerpt: "Hunian hijau dengan konsep lingkungan tenang dan nyaman.",
-    description: "Dayaprima Garden Town menghadirkan pengalaman tinggal yang lebih lega melalui ruang hijau, jalan lingkungan yang rapi, dan fasilitas komunal.",
+    slug: "nusa-idaman",
+    name: "Nusa Idaman Residence",
+    excerpt: "Hunian di koridor Tamalanrea-Biringkanaya, Makassar.",
+    description: "Nusa Idaman Residence berlokasi di Jl. Poros Tamalanrea Biringkanaya, Tamalanrea, Makassar. Kawasan ini berada di jalur strategis Kota Makassar dan mendukung mobilitas harian penghuni.",
     heroImage: "/images/dayaprima-hero.png",
+    promoBanner: "/images/promo-nusa-idaman.svg",
     gallery: ["/images/dayaprima-hero.png"],
-    location: "Berada di koridor pertumbuhan baru dengan akses menuju area komersial.",
-    mapEmbedUrl: "https://www.google.com/maps?q=Gowa&output=embed",
+    location: "Jl. Poros Tamalanrea Biringkanaya, Tamalanrea, Makassar, Kota Makassar, Sulawesi Selatan 90242.",
+    mapUrl: "https://maps.app.goo.gl/qSHbJMaCBG9ksomV6",
+    mapEmbedUrl: "https://www.google.com/maps?q=Nusa%20Idaman%20Residence%20Makassar&output=embed",
     facilities: ["Ruang terbuka hijau", "Musholla", "One gate system", "Area komersial"],
+    promo: {
+      priceStart: "295",
+      ppnStart: "25",
+      phone: "0853-4190-9329",
+      address: "Ruko BTP, Jalan Pujasera Blok M No.3-4, Tamalanrea, Makassar"
+    },
     featured: true,
     houseTypes: [
-      { name: "Type 30", size: "LT 60 / LB 30", price: "Mulai Rp 330 juta" },
-      { name: "Type 50", size: "LT 105 / LB 50", price: "Mulai Rp 690 juta" }
+      {
+        name: "Type 30",
+        slug: "type-30",
+        size: "LT 60 / LB 30",
+        price: "Mulai Rp 330 juta",
+        description: "Pilihan rumah praktis dengan denah sederhana dan harga terjangkau di kawasan Tamalanrea.",
+        bedrooms: 2,
+        bathrooms: 1,
+        floors: 1,
+        carport: 1,
+        features: ["2 kamar tidur", "1 kamar mandi", "Ruang keluarga", "Dapur", "Carport"],
+        floorPlanImage: "/images/dayaprima-hero-2.png",
+        gallery: ["/images/dayaprima-hero.png", "/images/dayaprima-hero-2.png"]
+      },
+      {
+        name: "Type 50",
+        slug: "type-50",
+        size: "LT 105 / LB 50",
+        price: "Mulai Rp 690 juta",
+        description: "Tipe rumah lebih luas untuk keluarga yang membutuhkan ruang tambahan dan kenyamanan lebih.",
+        bedrooms: 3,
+        bathrooms: 2,
+        floors: 1,
+        carport: 1,
+        features: ["3 kamar tidur", "2 kamar mandi", "Ruang keluarga", "Dapur", "Carport", "Ruang makan"],
+        floorPlanImage: "/images/dayaprima-hero-3.png",
+        gallery: ["/images/dayaprima-hero.png", "/images/dayaprima-hero-3.png"]
+      }
     ],
-    seoTitle: "Dayaprima Garden Town | Hunian Hijau Strategis",
-    seoDescription: "Dayaprima Garden Town menawarkan hunian hijau strategis dengan fasilitas keluarga dan lingkungan nyaman."
+    seoTitle: "Nusa Idaman Residence | Perumahan Dayaprima Nusawisesa di Tamalanrea Makassar",
+    seoDescription: "Nusa Idaman Residence adalah perumahan Dayaprima Nusawisesa di Jl. Poros Tamalanrea Biringkanaya, Kota Makassar."
   }
 ];
 

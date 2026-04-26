@@ -9,7 +9,7 @@ export function Header() {
           <span className="grid size-10 place-items-center rounded-md bg-forest text-white">
             <Building2 size={20} />
           </span>
-          <span className="text-lg">Dayaprima</span>
+          <span className="text-lg">Dayaprima Nusawisesa</span>
         </Link>
         <nav className="flex items-center gap-4 text-xs font-medium text-ink/70 sm:gap-6 sm:text-sm">
           <Link href="/#projects" className="hover:text-forest">Perumahan</Link>

@@ -11,12 +11,12 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   title: {
-    default: "Dayaprima | Developer Perumahan Modern",
-    template: "%s | Dayaprima"
+    default: "Dayaprima Nusawisesa | Developer Perumahan Modern",
+    template: "%s | Dayaprima Nusawisesa"
   },
-  description: "Dayaprima adalah developer perumahan modern dengan proyek hunian strategis, nyaman, dan bernilai untuk keluarga Indonesia.",
+  description: "Dayaprima Nusawisesa adalah developer perumahan modern dengan proyek hunian strategis, nyaman, dan bernilai untuk keluarga Indonesia.",
   openGraph: {
-    title: "Dayaprima",
+    title: "Dayaprima Nusawisesa",
     description: "Developer perumahan modern dengan proyek hunian strategis dan nyaman.",
     images: ["/images/dayaprima-hero.png"]
   }

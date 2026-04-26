@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, CheckCircle2, MapPin, ShieldCheck, Sparkles } from "lucide-react";
-import { WhatsappButton } from "@/components/WhatsappButton";
+import { HeroCarousel } from "@/components/HeroCarousel";
 import { getGlobals, getProjects, getTestimonials } from "@/lib/cms";
 
 export default async function HomePage() {
@@ -13,33 +13,7 @@ export default async function HomePage() {
 
   return (
     <main>
-      <section className="relative min-h-[calc(100vh-4rem)] overflow-hidden">
-        <Image
-          src="/images/dayaprima-hero.png"
-          alt="Kawasan perumahan modern Dayaprima"
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/48 to-transparent" />
-        <div className="container-x relative flex min-h-[calc(100vh-4rem)] items-center py-20">
-          <div className="max-w-2xl text-white">
-            <p className="mb-5 inline-flex rounded-md bg-white/12 px-3 py-2 text-sm font-medium backdrop-blur">
-              Developer Perumahan Terpercaya
-            </p>
-            <h1 className="text-4xl font-semibold leading-tight sm:text-6xl">Dayaprima</h1>
-            <p className="mt-5 max-w-xl text-lg leading-8 text-white/82">
-              {globals.tagline}. Temukan proyek hunian strategis dengan lingkungan tertata dan proses konsultasi yang jelas.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <WhatsappButton number={globals.whatsapp} />
-              <Link href="#projects" className="btn-secondary bg-white/95">
-                Lihat Perumahan <ArrowRight size={18} />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroCarousel globals={globals} />
 
       <section id="projects" className="container-x py-16">
         <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">

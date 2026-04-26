@@ -10,6 +10,7 @@
     "dev": "concurrently \"npm run dev:web\" \"npm run dev:cms\"",
     "dev:web": "npm --workspace apps/web run dev",
     "dev:cms": "npm --workspace apps/cms run develop",
+    "clean:web": "npm --workspace apps/web run clean",
     "build": "npm --workspace apps/web run build",
     "lint": "npm --workspace apps/web run lint",
     "seed": "npm --workspace apps/cms run seed"

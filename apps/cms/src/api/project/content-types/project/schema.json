@@ -33,6 +33,11 @@
       "multiple": false,
       "allowedTypes": ["images"]
     },
+    "promoBanner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
     "gallery": {
       "type": "media",
       "multiple": true,
@@ -51,12 +56,27 @@
     "location": {
       "type": "string"
     },
+    "mapUrl": {
+      "type": "text"
+    },
     "mapEmbedUrl": {
       "type": "text"
     },
     "featured": {
       "type": "boolean",
       "default": false
+    },
+    "promoPriceStart": {
+      "type": "string"
+    },
+    "promoPpnStart": {
+      "type": "string"
+    },
+    "promoPhone": {
+      "type": "string"
+    },
+    "promoAddress": {
+      "type": "text"
     },
     "seoTitle": {
       "type": "string"

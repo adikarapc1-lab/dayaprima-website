@@ -9,6 +9,10 @@
       "type": "string",
       "required": true
     },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
     "size": {
       "type": "string",
       "required": true
@@ -16,6 +20,36 @@
     "price": {
       "type": "string",
       "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "bedrooms": {
+      "type": "integer"
+    },
+    "bathrooms": {
+      "type": "integer"
+    },
+    "floors": {
+      "type": "integer"
+    },
+    "carport": {
+      "type": "integer"
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "project.house-feature"
+    },
+    "floorPlanImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"]
     }
   }
 }

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 768" role="img" aria-labelledby="title desc">
+  <title id="title">Promo Nusa Idaman Residence</title>
+  <desc id="desc">Nusa Idaman Residence promo harga mulai 295 jutaan, free PPN mulai dari 25 jutaan, siap huni.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#123f29"/>
+      <stop offset="0.55" stop-color="#1f5d3b"/>
+      <stop offset="1" stop-color="#244a8f"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" x2="1">
+      <stop offset="0" stop-color="#f37022"/>
+      <stop offset="1" stop-color="#f59c27"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="4" flood-color="#07160f" flood-opacity="0.65"/>
+    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#07160f" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1366" height="768" fill="#123f29"/>
+  <rect y="166" width="1366" height="445" fill="url(#bg)"/>
+  <rect y="0" width="1366" height="166" fill="#123f29"/>
+  <rect y="611" width="1366" height="157" fill="#123f29"/>
+  <path d="M0 186 C180 126 344 210 520 150 C724 80 870 170 1044 115 C1190 70 1276 96 1366 58 L1366 166 L0 166 Z" fill="#ffffff" opacity="0.09"/>
+
+  <g transform="translate(430 28)" filter="url(#shadow)">
+    <path d="M196 14 L246 76 L300 16" fill="none" stroke="#32448e" stroke-width="8" stroke-linecap="round"/>
+    <path d="M252 78 L306 35 L360 86" fill="none" stroke="#35bb55" stroke-width="8" stroke-linecap="round"/>
+    <path d="M215 124 C257 82 302 82 344 124 Z" fill="#f47b28"/>
+    <text x="0" y="116" font-family="Georgia, 'Times New Roman', serif" font-size="60" fill="#35bb55">Nusa Idaman</text>
+    <text x="78" y="154" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-style="italic" fill="#f47b28">Residence</text>
+  </g>
+
+  <g transform="translate(78 226)" fill="#fff" filter="url(#shadow)">
+    <text x="0" y="54" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="900">Harga Mulai</text>
+    <text x="0" y="186" font-family="Arial, Helvetica, sans-serif" font-size="142" font-weight="900">295</text>
+    <text x="280" y="168" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="900" transform="rotate(-90 280 168)">Jutaan</text>
+  </g>
+
+  <g transform="translate(384 246)" filter="url(#soft)">
+    <rect width="330" height="178" fill="url(#orange)"/>
+    <text x="28" y="63" font-family="Arial, Helvetica, sans-serif" font-size="55" font-weight="900" fill="#fff">FREE PPN*</text>
+    <text x="32" y="104" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="900" fill="#fff8a8">Mulai Dari</text>
+    <text x="88" y="166" font-family="Arial, Helvetica, sans-serif" font-size="105" font-weight="900" fill="#fff12b">25</text>
+    <text x="254" y="154" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="900" fill="#fff12b" transform="rotate(-90 254 154)">Jutaan</text>
+  </g>
+
+  <g transform="translate(744 230)" filter="url(#shadow)">
+    <text x="0" y="58" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="900" fill="#fff">Program Promo</text>
+    <text x="0" y="116" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="900" fill="#fff12b">FREE PPN*</text>
+    <text x="0" y="164" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="900" fill="#fff">Siap Huni</text>
+  </g>
+
+  <g transform="translate(430 636)" fill="#fff" filter="url(#shadow)">
+    <text x="0" y="34" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="900">Kantor Pemasaran</text>
+    <text x="0" y="72" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="800">Ruko BTP, Jalan Pujasera Blok M No.3-4, Makassar</text>
+  </g>
+
+  <g transform="translate(78 670)" fill="#fff" filter="url(#shadow)">
+    <circle cx="18" cy="18" r="18" fill="#fff"/>
+    <text x="8" y="28" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#1f5d3b">☎</text>
+    <text x="52" y="27" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="900">WhatsApp: 0853-4190-9329</text>
+  </g>
+
+  <g transform="translate(858 670)" fill="#fff" filter="url(#shadow)">
+    <circle cx="18" cy="18" r="18" fill="#fff"/>
+    <text x="7" y="27" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#1f5d3b">@</text>
+    <text x="52" y="27" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="900">Email: informasi@dayaprima.id</text>
+  </g>
+
+  <g transform="translate(1028 404)" filter="url(#shadow)">
+    <circle cx="96" cy="96" r="88" fill="#b70f0f"/>
+    <circle cx="96" cy="96" r="66" fill="#ffd35f"/>
+    <circle cx="96" cy="96" r="52" fill="#b70f0f"/>
+    <text x="96" y="87" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="900" fill="#fff">Siap</text>
+    <text x="96" y="124" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="900" fill="#fff">Huni</text>
+  </g>
+</svg>
