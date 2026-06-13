@@ -86,7 +86,7 @@ export default async function HouseTypePage({ params }) {
 
           <div>
             <h2 className="flex items-center gap-2 text-2xl font-semibold"><Home /> Denah Rumah</h2>
-            <div className="relative mt-5 aspect-[16/10] overflow-hidden rounded-md bg-white p-4 shadow-soft">
+            <div className="relative mt-5 aspect-[4/5] overflow-hidden rounded-md bg-white p-4 shadow-soft">
               <Image src={houseType.floorPlanImage || project.heroImage} alt={`Denah ${houseType.name}`} fill className="object-contain p-6" />
             </div>
           </div>

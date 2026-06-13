@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Denah Lokasi Strategis Nusa Idaman Residence</title>
+  <desc id="desc">Peta ilustratif akses Nusa Idaman Residence menuju Jalan Poros Moncongloe, BTP Makassar, dan kawasan Moncongloe Maros.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6f4ec"/>
+      <stop offset="1" stop-color="#e9efe1"/>
+    </linearGradient>
+    <linearGradient id="forest" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dcebd0"/>
+      <stop offset="1" stop-color="#c6e2bb"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#17211b" flood-opacity="0.16"/>
+    </filter>
+    <marker id="arrowGold" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c59b52"/>
+    </marker>
+    <marker id="arrowForest" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#23483b"/>
+    </marker>
+    <style>
+      .label { font-family: Inter, Arial, sans-serif; fill: #17211b; letter-spacing: 0; }
+      .muted { fill: #5f6f64; }
+      .white { fill: #ffffff; }
+      .gold-fill { fill: #c59b52; }
+      .forest-fill { fill: #23483b; }
+      .small { font-size: 25px; font-weight: 700; }
+      .tiny { font-size: 21px; font-weight: 650; }
+      .micro { font-size: 18px; font-weight: 650; }
+      .road-label { font-size: 23px; font-weight: 800; fill: #23483b; }
+      .badge-text { font-size: 24px; font-weight: 800; fill: #fff; }
+      .caption { font-size: 22px; font-weight: 600; fill: #5f6f64; }
+    </style>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#paper)"/>
+  <path d="M1135 45 C1368 88 1506 233 1628 362 C1740 480 1837 589 1920 619 L1920 1080 L1035 1080 C1013 915 1068 782 1162 660 C1256 537 1327 438 1224 303 C1163 222 1110 133 1135 45 Z" fill="url(#forest)" opacity="0.92"/>
+  <path d="M0 744 C148 698 250 745 349 800 C457 860 552 884 681 812 C810 740 941 709 1068 753 C1210 803 1336 787 1491 703 C1642 621 1780 586 1920 650 L1920 1080 L0 1080 Z" fill="#d7ead1" opacity="0.7"/>
+
+  <path d="M0 820 C156 774 270 823 386 879 C487 928 596 932 706 870 C841 793 983 783 1114 824 C1258 870 1392 844 1548 752 C1692 668 1815 644 1920 692" fill="none" stroke="#67c5df" stroke-width="9" stroke-linecap="round" opacity="0.9"/>
+  <text class="label tiny muted" x="985" y="792" transform="rotate(15 985 792)">Sungai Ticekkang</text>
+
+  <path d="M-80 202 C185 260 407 360 628 497 C780 591 913 652 1108 661 C1308 670 1533 634 1975 596" fill="none" stroke="#d8dde3" stroke-width="96" stroke-linecap="round"/>
+  <path d="M-80 202 C185 260 407 360 628 497 C780 591 913 652 1108 661 C1308 670 1533 634 1975 596" fill="none" stroke="#ffffff" stroke-width="64" stroke-linecap="round"/>
+  <path d="M-80 202 C185 260 407 360 628 497 C780 591 913 652 1108 661 C1308 670 1533 634 1975 596" fill="none" stroke="#9aa8b5" stroke-width="8" stroke-dasharray="18 18" opacity="0.45"/>
+
+  <path d="M186 0 C265 150 348 253 488 386 C600 492 724 591 864 721 C1003 850 1123 969 1190 1125" fill="none" stroke="#d8dde3" stroke-width="76" stroke-linecap="round"/>
+  <path d="M186 0 C265 150 348 253 488 386 C600 492 724 591 864 721 C1003 850 1123 969 1190 1125" fill="none" stroke="#ffffff" stroke-width="46" stroke-linecap="round"/>
+
+  <path d="M1202 -70 C1112 121 1010 284 865 431 C759 539 661 615 551 695 C443 774 336 843 196 1100" fill="none" stroke="#d8dde3" stroke-width="70" stroke-linecap="round"/>
+  <path d="M1202 -70 C1112 121 1010 284 865 431 C759 539 661 615 551 695 C443 774 336 843 196 1100" fill="none" stroke="#ffffff" stroke-width="42" stroke-linecap="round"/>
+
+  <path d="M606 250 C727 344 832 424 984 462 C1120 496 1270 494 1458 452" fill="none" stroke="#d8dde3" stroke-width="50" stroke-linecap="round"/>
+  <path d="M606 250 C727 344 832 424 984 462 C1120 496 1270 494 1458 452" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round"/>
+
+  <path d="M536 688 L718 688 L718 554 L826 554 L826 735 L1017 735 L1017 611 L1138 611 L1138 774 L1315 774 L1315 645 L1455 645" fill="none" stroke="#d8dde3" stroke-width="54" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M536 688 L718 688 L718 554 L826 554 L826 735 L1017 735 L1017 611 L1138 611 L1138 774 L1315 774 L1315 645 L1455 645" fill="none" stroke="#ffffff" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M314 304 C454 399 575 488 708 548" fill="none" stroke="#23483b" stroke-width="10" stroke-linecap="round" marker-end="url(#arrowForest)"/>
+  <text class="label road-label" x="260" y="280" transform="rotate(35 260 280)">Jl. Poros Moncongloe</text>
+  <text class="label tiny" x="76" y="233">Ke BTP / Kota Makassar</text>
+
+  <path d="M817 452 C973 501 1132 498 1323 461" fill="none" stroke="#c59b52" stroke-width="10" stroke-linecap="round" marker-end="url(#arrowGold)"/>
+  <text class="label road-label" x="876" y="417" transform="rotate(10 876 417)">Jl. Poros Pammanjengan</text>
+  <text class="label tiny" x="1325" y="425">Ke Moncongloe / Maros</text>
+
+  <path d="M799 752 C706 830 622 917 552 1034" fill="none" stroke="#23483b" stroke-width="9" stroke-linecap="round" marker-end="url(#arrowForest)" opacity="0.9"/>
+  <text class="label road-label" x="655" y="878" transform="rotate(-49 655 878)">Jl. Inspeksi PAM</text>
+
+  <g filter="url(#softShadow)">
+    <rect x="816" y="598" width="318" height="154" rx="20" fill="#23483b"/>
+    <path d="M846 674 L970 626 L1104 674 L970 726 Z" fill="#c59b52"/>
+    <circle cx="970" cy="674" r="30" fill="#f6f4ec"/>
+    <text class="label forest-fill" x="970" y="655" text-anchor="middle" font-size="24" font-weight="900">NIR</text>
+    <text class="label forest-fill" x="970" y="694" text-anchor="middle" font-size="21" font-weight="800">LOKASI</text>
+    <text class="label" x="970" y="802" text-anchor="middle" font-size="30" font-weight="900">Nusa Idaman Residence</text>
+  </g>
+  <line x1="970" y1="598" x2="970" y2="535" stroke="#c59b52" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="970" cy="527" r="18" fill="#c59b52" stroke="#fff" stroke-width="8"/>
+
+  <g>
+    <rect x="128" y="610" width="246" height="76" rx="12" fill="#fff" stroke="#d8dde3" stroke-width="3"/>
+    <text class="label micro" x="251" y="641" text-anchor="middle">Grand Sulawesi</text>
+    <text class="label micro muted" x="251" y="668" text-anchor="middle">Area perumahan</text>
+  </g>
+  <g>
+    <rect x="142" y="746" width="252" height="76" rx="12" fill="#fff" stroke="#d8dde3" stroke-width="3"/>
+    <text class="label micro" x="268" y="777" text-anchor="middle">Rachita Estate</text>
+    <text class="label micro muted" x="268" y="804" text-anchor="middle">Moncongloe</text>
+  </g>
+  <g>
+    <rect x="388" y="912" width="280" height="76" rx="12" fill="#fff" stroke="#d8dde3" stroke-width="3"/>
+    <text class="label micro" x="528" y="943" text-anchor="middle">Cendrawasih</text>
+    <text class="label micro muted" x="528" y="970" text-anchor="middle">Residence</text>
+  </g>
+  <g>
+    <rect x="1148" y="318" width="314" height="76" rx="12" fill="#fff" stroke="#d8dde3" stroke-width="3"/>
+    <text class="label micro" x="1305" y="349" text-anchor="middle">Pesona Pelangi</text>
+    <text class="label micro muted" x="1305" y="376" text-anchor="middle">Regency</text>
+  </g>
+  <g>
+    <rect x="1356" y="845" width="314" height="76" rx="12" fill="#fff" stroke="#d8dde3" stroke-width="3"/>
+    <text class="label micro" x="1513" y="876" text-anchor="middle">Bina Sarana</text>
+    <text class="label micro muted" x="1513" y="903" text-anchor="middle">Residence 2</text>
+  </g>
+  <g>
+    <circle cx="1582" cy="252" r="25" fill="#fff" stroke="#23483b" stroke-width="5"/>
+    <path d="M1569 262 L1595 262 L1590 244 L1574 244 Z" fill="#23483b"/>
+    <text class="label tiny" x="1621" y="260">Masjid Nur Al Iman</text>
+  </g>
+  <g>
+    <circle cx="196" cy="890" r="25" fill="#fff" stroke="#23483b" stroke-width="5"/>
+    <path d="M183 900 L209 900 L204 882 L188 882 Z" fill="#23483b"/>
+    <text class="label tiny" x="235" y="898">Masjid Al Mughnii</text>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <rect x="82" y="54" width="760" height="146" rx="18" fill="#17211b"/>
+    <text class="label white" x="120" y="110" font-size="38" font-weight="900">Denah Lokasi Strategis</text>
+    <text class="label gold-fill" x="120" y="158" font-size="43" font-weight="900">Nusa Idaman Residence</text>
+  </g>
+
+  <g>
+    <rect x="1322" y="58" width="466" height="170" rx="18" fill="#ffffff" stroke="#d8dde3" stroke-width="3"/>
+    <text class="label small" x="1360" y="110">Arah akses utama</text>
+    <line x1="1360" y1="143" x2="1455" y2="143" stroke="#23483b" stroke-width="9" marker-end="url(#arrowForest)"/>
+    <text class="label micro muted" x="1483" y="151">BTP / Kota Makassar</text>
+    <line x1="1360" y1="188" x2="1455" y2="188" stroke="#c59b52" stroke-width="9" marker-end="url(#arrowGold)"/>
+    <text class="label micro muted" x="1483" y="196">Moncongloe / Maros</text>
+  </g>
+
+  <g>
+    <rect x="82" y="936" width="820" height="86" rx="14" fill="#fff" stroke="#d8dde3" stroke-width="3"/>
+    <text class="caption" x="118" y="971">Peta ilustratif untuk materi pemasaran. Skala dan posisi landmark disederhanakan.</text>
+    <text class="caption" x="118" y="1004">Akses utama: Jl. Poros Moncongloe dan Jl. Poros Pammanjengan.</text>
+  </g>
+
+  <g>
+    <rect x="1498" y="938" width="288" height="72" rx="36" fill="#23483b"/>
+    <text class="badge-text" x="1642" y="983" text-anchor="middle">LOKASI STRATEGIS</text>
+  </g>
+</svg>

@@ -10,6 +10,7 @@ const API_TOKEN = process.env.STRAPI_API_TOKEN;
 const PROJECT_POPULATE = [
   "populate[heroImage]=true",
   "populate[promoBanner]=true",
+  "populate[video]=true",
   "populate[gallery]=true",
   "populate[houseTypes][populate][floorPlanImage]=true",
   "populate[houseTypes][populate][gallery]=true",
@@ -95,6 +96,7 @@ export async function getProjects({ featured } = {}) {
     ...project,
     heroImage: mediaUrl(project.heroImage),
     promoBanner: mediaUrl(project.promoBanner),
+    video: mediaUrl(project.video, null),
     gallery: mediaList(project.gallery),
     houseTypes: (project.houseTypes || []).map(normalizeHouseType),
     promo: {
@@ -116,6 +118,7 @@ export async function getProject(slug) {
     ...project,
     heroImage: mediaUrl(project.heroImage),
     promoBanner: mediaUrl(project.promoBanner),
+    video: mediaUrl(project.video, null),
     gallery: mediaList(project.gallery),
     houseTypes: (project.houseTypes || []).map(normalizeHouseType),
     promo: project.promo || {

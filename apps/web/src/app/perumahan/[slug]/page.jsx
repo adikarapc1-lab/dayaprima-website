@@ -51,20 +51,9 @@ export default async function ProjectPage({ params }) {
       <section className="container-x grid gap-10 py-14 lg:grid-cols-[1fr_380px]">
         <div className="space-y-12">
           <article className="prose prose-lg max-w-none">
-            <h2>Deskripsi Proyek</h2>
+            <h2>Informasi Perumahan</h2>
             <p>{project.description}</p>
           </article>
-
-          <div>
-            <h2 className="text-2xl font-semibold">Galeri</h2>
-            <div className="mt-5 grid gap-4 sm:grid-cols-2">
-              {(project.gallery?.length ? project.gallery : [project.heroImage]).map((image, index) => (
-                <a key={image} href={image} className="relative aspect-[4/3] overflow-hidden rounded-md bg-white shadow-soft">
-                  <Image src={image} alt={`${project.name} gallery ${index + 1}`} fill className="object-cover transition hover:scale-105" />
-                </a>
-              ))}
-            </div>
-          </div>
 
           <div>
             <h2 className="text-2xl font-semibold">Tipe Rumah</h2>
@@ -105,10 +94,41 @@ export default async function ProjectPage({ params }) {
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold">Fasilitas</h2>
+            <h2 className="text-2xl font-semibold">Fasilitas Perumahan</h2>
             <div className="mt-5 flex flex-wrap gap-3">
               {project.facilities.map((facility) => (
                 <span key={facility} className="rounded-md bg-white px-4 py-3 text-sm font-medium shadow-soft">{facility}</span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold">Video</h2>
+            {project.video ? (
+              <div className="mt-5 overflow-hidden rounded-md bg-black shadow-soft">
+                <video
+                  controls
+                  preload="metadata"
+                  className="aspect-video w-full"
+                  src={project.video}
+                >
+                  Browser Anda tidak mendukung pemutaran video.
+                </video>
+              </div>
+            ) : (
+              <div className="mt-5 rounded-md border border-ink/10 bg-white p-5 text-sm text-ink/65 shadow-soft">
+                Video perumahan belum tersedia saat ini.
+              </div>
+            )}
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold">Galeri Perumahan</h2>
+            <div className="mt-5 grid gap-4 sm:grid-cols-2">
+              {(project.gallery?.length ? project.gallery : [project.heroImage]).map((image, index) => (
+                <a key={image} href={image} className="relative aspect-[4/3] overflow-hidden rounded-md bg-white shadow-soft">
+                  <Image src={image} alt={`${project.name} gallery ${index + 1}`} fill className="object-cover transition hover:scale-105" />
+                </a>
               ))}
             </div>
           </div>

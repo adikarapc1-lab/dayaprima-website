@@ -18,7 +18,8 @@ export const sampleProjects = [
     excerpt: "Perumahan strategis di kawasan BTP, Makassar.",
     description: "Nusa Harapan Permai berada di kawasan BTP, Makassar, tepatnya Kelurahan Katimbang, Kecamatan Biringkanaya. Lingkungan ini cocok untuk keluarga yang membutuhkan akses praktis menuju kawasan hunian, pendidikan, dan aktivitas harian di Makassar.",
     heroImage: "/images/dayaprima-hero.png",
-    promoBanner: "/images/promo-nusa-harapan-permai.png",
+    promoBanner: "/images/promo-dayaprima-dp-6-juta-siap-huni-v1.png",
+    video: "/videos/nusa-harapan-permai.mp4",
     gallery: ["/images/dayaprima-hero.png"],
     location: "BTP, Makassar (Kelurahan Katimbang, Kecamatan Biringkanaya).",
     mapUrl: "https://maps.app.goo.gl/4VC8JhWmBoFMyPDg6",
@@ -43,8 +44,8 @@ export const sampleProjects = [
         floors: 1,
         carport: 1,
         features: ["2 kamar tidur", "1 kamar mandi", "Ruang keluarga", "Dapur", "Carport", "Area taman depan"],
-        floorPlanImage: "/images/dayaprima-hero-2.png",
-        gallery: ["/images/dayaprima-hero.png", "/images/dayaprima-hero-2.png"]
+        floorPlanImage: "/images/floorplan-type-36-75-v1.png",
+        gallery: ["/images/dayaprima-hero.png", "/images/floorplan-type-36-75-v1.png"]
       },
       {
         name: "Type 45",
@@ -57,8 +58,8 @@ export const sampleProjects = [
         floors: 1,
         carport: 1,
         features: ["2 kamar tidur", "1 kamar mandi", "Ruang tamu", "Dapur", "Carport", "Halaman belakang"],
-        floorPlanImage: "/images/dayaprima-hero-3.png",
-        gallery: ["/images/dayaprima-hero.png", "/images/dayaprima-hero-3.png"]
+        floorPlanImage: "/images/floorplan-couple-type-45-90-v1.png",
+        gallery: ["/images/dayaprima-hero.png", "/images/floorplan-couple-type-45-90-v1.png"]
       }
     ],
     seoTitle: "Nusa Harapan Permai | Perumahan Dayaprima Nusawisesa di BTP Makassar",
@@ -70,7 +71,7 @@ export const sampleProjects = [
     excerpt: "Hunian di koridor Tamalanrea-Biringkanaya, Makassar.",
     description: "Nusa Idaman Residence berlokasi di Jl. Poros Tamalanrea Biringkanaya, Tamalanrea, Makassar. Kawasan ini berada di jalur strategis Kota Makassar dan mendukung mobilitas harian penghuni.",
     heroImage: "/images/dayaprima-hero.png",
-    promoBanner: "/images/promo-nusa-idaman.svg",
+    promoBanner: "/images/promo-dayaprima-dp-3-juta-siap-huni-v1.png",
     gallery: ["/images/dayaprima-hero.png"],
     location: "Jl. Poros Tamalanrea Biringkanaya, Tamalanrea, Makassar, Kota Makassar, Sulawesi Selatan 90242.",
     mapUrl: "https://maps.app.goo.gl/qSHbJMaCBG9ksomV6",
@@ -95,8 +96,8 @@ export const sampleProjects = [
         floors: 1,
         carport: 1,
         features: ["2 kamar tidur", "1 kamar mandi", "Ruang keluarga", "Dapur", "Carport"],
-        floorPlanImage: "/images/dayaprima-hero-2.png",
-        gallery: ["/images/dayaprima-hero.png", "/images/dayaprima-hero-2.png"]
+        floorPlanImage: "/images/floorplan-type-36-75-v1.png",
+        gallery: ["/images/dayaprima-hero.png", "/images/floorplan-type-36-75-v1.png"]
       },
       {
         name: "Type 50",
@@ -109,8 +110,8 @@ export const sampleProjects = [
         floors: 1,
         carport: 1,
         features: ["3 kamar tidur", "2 kamar mandi", "Ruang keluarga", "Dapur", "Carport", "Ruang makan"],
-        floorPlanImage: "/images/dayaprima-hero-3.png",
-        gallery: ["/images/dayaprima-hero.png", "/images/dayaprima-hero-3.png"]
+        floorPlanImage: "/images/floorplan-couple-type-45-90-v1.png",
+        gallery: ["/images/dayaprima-hero.png", "/images/floorplan-couple-type-45-90-v1.png"]
       }
     ],
     seoTitle: "Nusa Idaman Residence | Perumahan Dayaprima Nusawisesa di Tamalanrea Makassar",
