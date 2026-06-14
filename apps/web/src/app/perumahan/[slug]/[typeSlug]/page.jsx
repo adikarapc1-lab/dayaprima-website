@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, Bath, BedDouble, Car, CheckCircle2, Home, Layers } from "lucide-react";
 import { InquiryForm } from "@/components/InquiryForm";
 import { ImageGalleryCarousel } from "@/components/ImageGalleryCarousel";
+import { KprSimulator } from "@/components/KprSimulator";
 import { WhatsappButton } from "@/components/WhatsappButton";
 import { getGlobals, getHouseType, getProjects } from "@/lib/cms";
 
@@ -114,6 +115,15 @@ export default async function HouseTypePage({ params }) {
               <ImageGalleryCarousel images={images} title={`${project.name} ${houseType.name}`} />
             </div>
           </div>
+
+          <KprSimulator
+            priceText={houseType.price}
+            whatsapp={globals.whatsapp}
+            contextName={`${project.name} - ${houseType.name}`}
+            interestRate={globals.kprInterestRate}
+            tenorYears={globals.kprTenorYears}
+            dpPercent={globals.kprDpPercent}
+          />
         </div>
 
         <aside className="space-y-4 lg:sticky lg:top-24 lg:self-start">

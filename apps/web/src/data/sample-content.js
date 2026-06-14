@@ -8,7 +8,10 @@ export const sampleGlobals = {
   socialLinks: [
     { label: "Instagram", url: "https://instagram.com/dayaprima" },
     { label: "Facebook", url: "https://facebook.com/dayaprima" }
-  ]
+  ],
+  kprInterestRate: 7,
+  kprTenorYears: 15,
+  kprDpPercent: 20
 };
 
 export const sampleProjects = [
@@ -63,7 +66,25 @@ export const sampleProjects = [
       }
     ],
     seoTitle: "Nusa Harapan Permai | Perumahan Dayaprima Nusawisesa di BTP Makassar",
-    seoDescription: "Nusa Harapan Permai adalah perumahan Dayaprima Nusawisesa di kawasan BTP, Makassar, Kelurahan Katimbang, Kecamatan Biringkanaya."
+    seoDescription: "Nusa Harapan Permai adalah perumahan Dayaprima Nusawisesa di kawasan BTP, Makassar, Kelurahan Katimbang, Kecamatan Biringkanaya.",
+    faqs: [
+      {
+        question: "Apakah unit di Nusa Harapan Permai sudah bersertifikat?",
+        answer: "Ya. Setiap unit dilengkapi sertifikat (SHM/SHGB) dan IMB/PBG sesuai ketentuan, serta proses balik nama dibantu tim legal kami."
+      },
+      {
+        question: "Apakah bisa dibeli dengan KPR?",
+        answer: "Bisa. Kami bekerja sama dengan beberapa bank untuk KPR. Anda dapat memakai fitur Simulasi KPR di halaman ini untuk memperkirakan cicilan, lalu tim kami membantu proses pengajuannya."
+      },
+      {
+        question: "Di mana lokasi tepatnya dan bagaimana aksesnya?",
+        answer: "Berada di kawasan BTP, Makassar (Kelurahan Katimbang, Kecamatan Biringkanaya), dengan akses praktis menuju kawasan pendidikan, fasilitas kesehatan, dan jalur utama kota."
+      },
+      {
+        question: "Berapa lama proses serah terima unit?",
+        answer: "Untuk unit siap huni (ready stock) serah terima dapat dilakukan setelah administrasi dan pembayaran selesai. Untuk unit indent, jadwalnya akan diinformasikan tim pemasaran."
+      }
+    ]
   },
   {
     slug: "nusa-idaman",
@@ -71,7 +92,7 @@ export const sampleProjects = [
     excerpt: "Hunian di koridor Tamalanrea-Biringkanaya, Makassar.",
     description: "Nusa Idaman Residence berlokasi di Jl. Poros Tamalanrea Biringkanaya, Tamalanrea, Makassar. Kawasan ini berada di jalur strategis Kota Makassar dan mendukung mobilitas harian penghuni.",
     heroImage: "/images/dayaprima-hero.png",
-    promoBanner: "/images/promo-dayaprima-dp-3-juta-siap-huni-v1.png",
+    promoBanner: "/images/promo-nusa-idaman-v2.png",
     gallery: ["/images/dayaprima-hero.png"],
     location: "Jl. Poros Tamalanrea Biringkanaya, Tamalanrea, Makassar, Kota Makassar, Sulawesi Selatan 90242.",
     mapUrl: "https://maps.app.goo.gl/qSHbJMaCBG9ksomV6",
@@ -115,7 +136,25 @@ export const sampleProjects = [
       }
     ],
     seoTitle: "Nusa Idaman Residence | Perumahan Dayaprima Nusawisesa di Tamalanrea Makassar",
-    seoDescription: "Nusa Idaman Residence adalah perumahan Dayaprima Nusawisesa di Jl. Poros Tamalanrea Biringkanaya, Kota Makassar."
+    seoDescription: "Nusa Idaman Residence adalah perumahan Dayaprima Nusawisesa di Jl. Poros Tamalanrea Biringkanaya, Kota Makassar.",
+    faqs: [
+      {
+        question: "Apakah legalitas Nusa Idaman Residence aman?",
+        answer: "Aman. Unit memiliki sertifikat dan izin bangunan yang sah, dan seluruh dokumen dapat diperiksa langsung sebelum transaksi."
+      },
+      {
+        question: "Apa saja pilihan tipe rumahnya?",
+        answer: "Tersedia beberapa tipe, mulai dari Type 30 untuk kebutuhan praktis hingga Type 50 yang lebih luas. Detail spesifikasi dan harga tiap tipe ada di halaman ini."
+      },
+      {
+        question: "Apakah tersedia promo DP ringan?",
+        answer: "Kami secara berkala menawarkan promo DP ringan dan skema pembayaran fleksibel. Hubungi tim kami via WhatsApp untuk promo yang sedang berlaku."
+      },
+      {
+        question: "Bagaimana cara menjadwalkan kunjungan ke lokasi?",
+        answer: "Klik tombol WhatsApp atau isi formulir inquiry di halaman ini. Tim pemasaran akan mengatur jadwal survei lokasi sesuai waktu Anda."
+      }
+    ]
   }
 ];
 
@@ -126,7 +165,7 @@ export const sampleArticles = [
     excerpt: "Panduan ringkas mengevaluasi lokasi, legalitas, fasilitas, dan biaya kepemilikan rumah.",
     publishedAt: "2026-01-12",
     coverImage: "/images/dayaprima-hero.png",
-    content: "Memilih rumah pertama perlu dimulai dari kebutuhan harian. Perhatikan jarak ke sekolah, kantor, fasilitas kesehatan, dan akses jalan. Setelah itu, cek legalitas proyek dan skema pembayaran secara teliti."
+    content: "Memilih rumah pertama perlu dimulai dari kebutuhan harian. Perhatikan jarak ke sekolah, kantor, fasilitas kesehatan, dan akses jalan. Setelah itu, cek legalitas perumahan dan skema pembayaran secara teliti."
   }
 ];
 

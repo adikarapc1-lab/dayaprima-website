@@ -4,8 +4,8 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "Project",
-    "description": "Housing projects shown on the website"
+    "displayName": "Perumahan",
+    "description": "Data perumahan yang ditampilkan di website"
   },
   "options": {
     "draftAndPublish": true
@@ -57,6 +57,11 @@
       "type": "component",
       "repeatable": true,
       "component": "project.facility"
+    },
+    "faqs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "project.faq"
     },
     "location": {
       "type": "string"

@@ -38,8 +38,8 @@ function pdf(lines) {
 export function GET() {
   const body = pdf([
     "Developer perumahan modern di Makassar.",
-    "Proyek: Nusa Harapan Permai - BTP, Makassar.",
-    "Proyek: Nusa Idaman Residence - Jl. Poros Tamalanrea Biringkanaya.",
+    "Perumahan: Nusa Harapan Permai - BTP, Makassar.",
+    "Perumahan: Nusa Idaman Residence - Jl. Poros Tamalanrea Biringkanaya.",
     "WhatsApp: 0853-4190-9329",
     "Email: informasi@dayaprima.id",
     "Alamat: Ruko BTP, Jalan Pujasera Blok M No.3-4, Tamalanrea, Makassar."

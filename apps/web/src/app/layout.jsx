@@ -14,10 +14,10 @@ export const metadata = {
     default: "Dayaprima Nusawisesa | Developer Perumahan Modern",
     template: "%s | Dayaprima Nusawisesa"
   },
-  description: "Dayaprima Nusawisesa adalah developer perumahan modern dengan proyek hunian strategis, nyaman, dan bernilai untuk keluarga Indonesia.",
+  description: "Dayaprima Nusawisesa adalah developer perumahan modern dengan hunian strategis, nyaman, dan bernilai untuk keluarga Indonesia.",
   openGraph: {
     title: "Dayaprima Nusawisesa",
-    description: "Developer perumahan modern dengan proyek hunian strategis dan nyaman.",
+    description: "Developer perumahan modern dengan hunian strategis dan nyaman.",
     images: ["/images/dayaprima-hero.png"]
   }
 };

@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Send } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 
 export function InquiryForm({ project }) {
   const [status, setStatus] = useState("idle");
+  const loadedAt = useRef(Date.now());
 
   async function onSubmit(event) {
     event.preventDefault();
@@ -16,7 +17,11 @@ export function InquiryForm({ project }) {
     const res = await fetch("/api/leads", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ...payload, project: project?.name || "" })
+      body: JSON.stringify({
+        ...payload,
+        project: project?.name || "",
+        elapsedMs: Date.now() - loadedAt.current
+      })
     });
 
     if (res.ok) {
@@ -30,6 +35,11 @@ export function InquiryForm({ project }) {
 
   return (
     <form onSubmit={onSubmit} className="space-y-4 rounded-md border border-ink/10 bg-white p-5 shadow-soft">
+      {/* Honeypot anti-bot: disembunyikan dari pengguna, hanya bot yang mengisinya. */}
+      <div className="hidden" aria-hidden="true">
+        <label htmlFor="company">Perusahaan</label>
+        <input id="company" name="company" type="text" tabIndex={-1} autoComplete="off" />
+      </div>
       <div>
         <label className="text-sm font-semibold" htmlFor="name">Nama</label>
         <input id="name" name="name" required className="mt-2 w-full rounded-md border border-ink/15 px-3 py-3 outline-none focus:border-gold" />

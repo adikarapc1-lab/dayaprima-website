@@ -46,7 +46,7 @@ export function HeroCarousel({ globals }) {
           </p>
           <h1 className="text-4xl font-semibold leading-tight sm:text-6xl">{globals.companyName}</h1>
           <p className="mt-5 max-w-xl text-lg leading-8 text-white/82">
-            {globals.tagline}. Temukan proyek hunian strategis dengan lingkungan tertata dan proses konsultasi yang jelas.
+            {globals.tagline}. Temukan perumahan strategis dengan lingkungan tertata dan proses konsultasi yang jelas.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <WhatsappButton number={globals.whatsapp} />

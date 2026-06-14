@@ -19,7 +19,7 @@ export function Footer({ globals }) {
         </div>
         <div className="space-y-3 text-sm text-white/75">
           <p className="font-semibold text-white">Navigasi</p>
-          <Link className="block hover:text-gold" href="/#projects">Perumahan</Link>
+          <Link className="block hover:text-gold" href="/perumahan">Perumahan</Link>
           <Link className="block hover:text-gold" href="/blog">Artikel</Link>
           <Link className="block hover:text-gold" href="/#contact">Hubungi Kami</Link>
         </div>

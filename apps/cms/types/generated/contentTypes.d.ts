@@ -482,6 +482,9 @@ export interface ApiGlobalSettingGlobalSetting extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     email: Schema.Attribute.Email;
+    kprDpPercent: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<20>;
+    kprInterestRate: Schema.Attribute.Decimal & Schema.Attribute.DefaultTo<7>;
+    kprTenorYears: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<15>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -533,8 +536,8 @@ export interface ApiLeadLead extends Struct.CollectionTypeSchema {
 export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   collectionName: 'projects';
   info: {
-    description: 'Housing projects shown on the website';
-    displayName: 'Project';
+    description: 'Data perumahan yang ditampilkan di website';
+    displayName: 'Perumahan';
     pluralName: 'projects';
     singularName: 'project';
   };
@@ -548,6 +551,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     description: Schema.Attribute.RichText & Schema.Attribute.Required;
     excerpt: Schema.Attribute.Text & Schema.Attribute.Required;
     facilities: Schema.Attribute.Component<'project.facility', true>;
+    faqs: Schema.Attribute.Component<'project.faq', true>;
     featured: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     gallery: Schema.Attribute.Media<'images', true>;
     heroImage: Schema.Attribute.Media<'images'>;
@@ -559,9 +563,14 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     location: Schema.Attribute.String;
-    mapUrl: Schema.Attribute.Text;
     mapEmbedUrl: Schema.Attribute.Text;
+    mapUrl: Schema.Attribute.Text;
     name: Schema.Attribute.String & Schema.Attribute.Required;
+    promoAddress: Schema.Attribute.Text;
+    promoBanner: Schema.Attribute.Media<'images'>;
+    promoPhone: Schema.Attribute.String;
+    promoPpnStart: Schema.Attribute.String;
+    promoPriceStart: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     seoDescription: Schema.Attribute.Text;
     seoTitle: Schema.Attribute.String;
@@ -569,6 +578,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    video: Schema.Attribute.Media<'videos'>;
   };
 }
 

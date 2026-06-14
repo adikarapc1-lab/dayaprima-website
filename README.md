@@ -30,7 +30,7 @@ dayaprima-website/
 │   │       │   ├── page.jsx              # homepage
 │   │       │   ├── robots.js / sitemap.js
 │   │       │   ├── blog/                 # /blog and /blog/[slug]
-│   │       │   ├── perumahan/            # /perumahan/[slug] and /perumahan/[slug]/[typeSlug]
+│   │       │   ├── perumahan/            # /perumahan (listing + filter), /perumahan/[slug], /perumahan/[slug]/[typeSlug]
 │   │       │   └── api/
 │   │       │       ├── leads/route.js    # POST lead → Strapi, falls back to .local/leads.json
 │   │       │       └── brochure/route.js # GET generated PDF brochure (no deps, hand-built PDF)
@@ -73,7 +73,9 @@ Requirements: Node.js 18+ and npm. Run everything from the repo root.
    - Website: `http://localhost:3000`
    - Strapi admin: `http://localhost:1337/admin`
 
-4. Create the first Strapi admin user in the browser, then add projects, articles, testimonials, and global settings.
+4. Create the first Strapi admin user in the browser, then add perumahan, articles, testimonials, and global settings.
+
+   To skip manual entry, you can **auto-seed the sample content** instead: stop `npm run dev`, run `npm run seed` (creates + publishes everything, uploads images, and enables Public permissions), then start `npm run dev` again.
 
 > The frontend works **before** Strapi has any data — it renders the sample content from `apps/web/src/data/sample-content.js`. Strapi only needs to be running/populated to serve real CMS content.
 
@@ -87,7 +89,7 @@ Requirements: Node.js 18+ and npm. Run everything from the repo root.
 | `npm run build` | Production build of the frontend |
 | `npm run lint` | `next lint` on the frontend |
 | `npm run clean:web` | Remove the frontend `.next` cache |
-| `npm run seed` | Run `apps/cms/scripts/seed.js` against Strapi |
+| `npm run seed` | Auto-seed Strapi from the sample content: creates & **publishes** the perumahan/articles/testimonials/global-setting, **uploads** the referenced images/video from `apps/web/public`, and enables the Public role permissions. **Stop `npm run dev` first** (the seeder boots its own Strapi against the same SQLite file). Safe to re-run — it clears existing seeded collections first. |
 
 Note: `apps/web` has a `predev` step that deletes `.next` before each `dev` run.
 
@@ -100,7 +102,7 @@ The frontend never calls Strapi directly from components — everything goes thr
 - Strapi v5 responses are flattened via `unwrapCollection()`, and media is resolved with `mediaUrl()` / `mediaList()` (prefixes relative Strapi paths with `NEXT_PUBLIC_STRAPI_URL`, passes through absolute Cloudinary URLs). House types are reshaped by `normalizeHouseType()`.
 - Project reads use a fixed deep-populate query (`PROJECT_POPULATE`) so hero image, promo banner, video, gallery, house types (with floor plan + gallery + features), and facilities all come back in one call.
 
-Lead submission flow ([`apps/web/src/app/api/leads/route.js`](apps/web/src/app/api/leads/route.js)): the client POSTs to `/api/leads` → `submitLead()` POSTs to Strapi `/api/leads`. If Strapi rejects/unreachable, the lead is appended to `apps/web/.local/leads.json` so no submission is lost.
+Lead submission flow ([`apps/web/src/app/api/leads/route.js`](apps/web/src/app/api/leads/route.js)): the client POSTs to `/api/leads` → `submitLead()` POSTs to Strapi `/api/leads`. If Strapi rejects/unreachable, the lead is appended to `apps/web/.local/leads.json` so no submission is lost. The route also runs **anti-spam** (a hidden `company` honeypot + a minimum fill-time check) and, after saving, fires **best-effort notifications** via [`apps/web/src/lib/notify.js`](apps/web/src/lib/notify.js) to whichever channels are configured by env (Telegram, a generic webhook for Slack/Discord/Google Chat, and/or email via Resend). All channels are optional — with none set, leads still save normally.
 
 The brochure endpoint ([`apps/web/src/app/api/brochure/route.js`](apps/web/src/app/api/brochure/route.js)) generates a minimal PDF in pure JS (no library) and returns it as a download.
 
@@ -110,17 +112,18 @@ Content types live under `apps/cms/src/api/*` (each with `content-types`, `contr
 
 | Content type | Notes |
 | --- | --- |
-| `project` (collection) | Main showcase entity. Draft & publish enabled. Fields: `name`, `slug` (uid), `excerpt`, `description` (richtext), `heroImage`, `promoBanner`, `video`, `gallery`, `houseTypes[]`, `facilities[]`, `location`, `mapUrl`, `mapEmbedUrl`, `featured`, `promoPriceStart`, `promoPpnStart`, `promoPhone`, `promoAddress`, `seoTitle`, `seoDescription`. |
+| `project` (collection) | Main showcase entity. Draft & publish enabled. Fields: `name`, `slug` (uid), `excerpt`, `description` (richtext), `heroImage`, `promoBanner`, `video`, `gallery`, `houseTypes[]`, `facilities[]`, `faqs[]`, `location`, `mapUrl`, `mapEmbedUrl`, `featured`, `promoPriceStart`, `promoPpnStart`, `promoPhone`, `promoAddress`, `seoTitle`, `seoDescription`. |
 | `article` (collection) | Blog posts (`/blog`). |
 | `testimonial` (collection) | Customer testimonials. |
 | `lead` (collection) | Inquiry submissions from the website. |
-| `global-setting` (single) | Site-wide settings (e.g. WhatsApp number, social links) consumed in `layout.jsx`. |
+| `global-setting` (single) | Site-wide settings (e.g. WhatsApp number, social links) consumed in `layout.jsx`. Also holds the KPR simulator defaults: `kprInterestRate` (% per year), `kprTenorYears`, `kprDpPercent`. Edit these to change the default interest/tenor/down-payment used by the **Simulasi KPR** on every perumahan & house-type page (visitors can still adjust the sliders). |
 
 Reusable components under `apps/cms/src/components/`:
 
 - `project.house-type` — `name`, `slug`, `size`, `price`, `description`, `bedrooms`, `bathrooms`, `floors`, `carport`, `features[]`, `floorPlanImage`, `gallery`.
 - `project.house-feature` — single `label`.
 - `project.facility` — facility entry.
+- `project.faq` — `question` + `answer`, rendered as an accordion on the perumahan page and emitted as `FAQPage` JSON-LD for SEO rich snippets.
 - `shared.social-link` — social link entry.
 
 If you change a schema here, also update the populate/normalize logic in `apps/web/src/lib/cms.js` **and** the matching shape in `apps/web/src/data/sample-content.js` so the fallback stays in sync.
@@ -137,6 +140,9 @@ If you change a schema here, also update the populate/normalize logic in `apps/w
 | `NEXT_PUBLIC_GA_ID` | Google Analytics ID (optional) |
 | `NEXT_PUBLIC_GTM_ID` | Google Tag Manager ID (optional) |
 | `STRAPI_API_TOKEN` | Server-side token for reads/lead creation when Strapi permissions are locked down |
+| `TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID` | Optional — send each new lead to a Telegram chat |
+| `LEAD_WEBHOOK_URL` | Optional — POST each new lead to a Slack/Discord/Google Chat/Zapier/Make webhook |
+| `RESEND_API_KEY` / `LEAD_NOTIFY_EMAIL` / `LEAD_FROM_EMAIL` | Optional — email each new lead via Resend (`LEAD_NOTIFY_EMAIL` accepts a comma-separated list) |
 
 ### CMS — `apps/cms/.env`
 

@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
+import { Lightbox } from "@/components/Lightbox";
 
 export function ImageGalleryCarousel({ images, title }) {
   const safeImages = images?.length ? images : [];
@@ -84,71 +85,13 @@ export function ImageGalleryCarousel({ images, title }) {
       ) : null}
 
       {lightboxOpen ? (
-        <div className="fixed inset-0 z-[9999] isolate bg-black/70" onClick={() => setLightboxOpen(false)}>
-          <div className="absolute inset-0 z-0 bg-black/5" />
-          <div className="absolute left-4 top-4 z-20 text-sm font-semibold text-white/80">
-            {active + 1} / {safeImages.length}
-          </div>
-          <button
-            type="button"
-            aria-label="Tutup galeri"
-            onClick={(event) => {
-              event.stopPropagation();
-              setLightboxOpen(false);
-            }}
-            className="absolute right-4 top-4 z-30 grid size-11 place-items-center rounded-md bg-white/10 text-white transition hover:bg-white/20 lg:right-[calc(11rem+1rem)]"
-          >
-            <X size={24} />
-          </button>
-          {safeImages.length > 1 ? (
-            <>
-              <button
-                type="button"
-                aria-label="Gambar sebelumnya"
-                onClick={(event) => {
-                  event.stopPropagation();
-                  move(-1);
-                }}
-                className="absolute left-3 top-1/2 z-30 grid size-12 -translate-y-1/2 place-items-center rounded-full bg-white/12 text-white transition hover:bg-clay md:left-8"
-              >
-                <ChevronLeft size={26} />
-              </button>
-              <button
-                type="button"
-                aria-label="Gambar berikutnya"
-                onClick={(event) => {
-                  event.stopPropagation();
-                  move(1);
-                }}
-                className="absolute right-3 top-1/2 z-30 grid size-12 -translate-y-1/2 place-items-center rounded-full bg-white/12 text-white transition hover:bg-clay lg:right-[calc(11rem+2rem)]"
-              >
-                <ChevronRight size={26} />
-              </button>
-            </>
-          ) : null}
-          <div className="relative z-10 flex h-full items-center justify-center p-4 pb-28 lg:pr-48 md:p-12">
-            <div className="relative aspect-[16/9] w-full max-w-6xl bg-black shadow-[0_28px_90px_rgba(0,0,0,0.75)]" onClick={(event) => event.stopPropagation()}>
-              <Image src={safeImages[active]} alt={`${title} ${active + 1}`} fill className="object-contain" />
-            </div>
-          </div>
-          {safeImages.length > 1 ? (
-            <aside className="absolute bottom-0 right-0 z-20 flex w-full gap-2 overflow-x-auto bg-white/95 p-2 lg:bottom-auto lg:top-0 lg:h-full lg:w-44 lg:flex-col lg:overflow-y-auto lg:overflow-x-hidden" onClick={(event) => event.stopPropagation()}>
-              {safeImages.map((image, index) => (
-                <button
-                  key={image}
-                  type="button"
-                  onClick={() => setActive(index)}
-                  className={`relative h-20 w-28 shrink-0 overflow-hidden border-4 transition lg:h-20 lg:w-full ${
-                    index === active ? "border-clay" : "border-transparent hover:border-gold"
-                  }`}
-                  aria-label={`Buka gambar ${index + 1}`}
-                >
-                  <Image src={image} alt="" fill className="object-cover" />
-                </button>
-              ))}
-            </aside>
-          ) : null}
-        </div>
+        <Lightbox
+          images={safeImages}
+          title={title}
+          index={active}
+          onIndexChange={setActive}
+          onClose={() => setLightboxOpen(false)}
+        />
       ) : null}
     </div>
   );

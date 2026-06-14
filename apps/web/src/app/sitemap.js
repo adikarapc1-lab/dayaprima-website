@@ -6,6 +6,7 @@ export default async function sitemap() {
 
   return [
     { url: siteUrl, lastModified: new Date() },
+    { url: `${siteUrl}/perumahan`, lastModified: new Date() },
     { url: `${siteUrl}/blog`, lastModified: new Date() },
     ...projects.map((project) => ({ url: `${siteUrl}/perumahan/${project.slug}`, lastModified: new Date() })),
     ...articles.map((article) => ({ url: `${siteUrl}/blog/${article.slug}`, lastModified: new Date() }))

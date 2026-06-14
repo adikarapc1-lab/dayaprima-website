@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_project_faqs",
+  "info": {
+    "displayName": "FAQ",
+    "description": "Pertanyaan yang sering diajukan untuk perumahan ini"
+  },
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "answer": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

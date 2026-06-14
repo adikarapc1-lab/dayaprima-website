@@ -33,6 +33,21 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.social-link"
+    },
+    "kprInterestRate": {
+      "type": "decimal",
+      "default": 7,
+      "description": "Suku bunga KPR per tahun (persen) untuk simulasi, mis. 7 untuk 7%."
+    },
+    "kprTenorYears": {
+      "type": "integer",
+      "default": 15,
+      "description": "Tenor KPR default (tahun) untuk simulasi."
+    },
+    "kprDpPercent": {
+      "type": "integer",
+      "default": 20,
+      "description": "Uang muka (DP) default dalam persen untuk simulasi."
     }
   }
 }

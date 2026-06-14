@@ -12,7 +12,7 @@ export function Header() {
           <span className="text-lg">Dayaprima Nusawisesa</span>
         </Link>
         <nav className="flex items-center gap-4 text-xs font-medium text-ink/70 sm:gap-6 sm:text-sm">
-          <Link href="/#projects" className="hover:text-forest">Perumahan</Link>
+          <Link href="/perumahan" className="hover:text-forest">Perumahan</Link>
           <Link href="/blog" className="hover:text-forest">Blog</Link>
           <Link href="/#contact" className="btn-primary px-3 py-2 sm:px-4">Kontak</Link>
         </nav>

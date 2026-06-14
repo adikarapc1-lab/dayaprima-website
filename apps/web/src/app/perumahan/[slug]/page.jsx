@@ -2,7 +2,10 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Bath, BedDouble, Car, ExternalLink, Home, Layers, MapPin, Ruler } from "lucide-react";
+import { FaqAccordion } from "@/components/FaqAccordion";
+import { GalleryGrid } from "@/components/GalleryGrid";
 import { InquiryForm } from "@/components/InquiryForm";
+import { KprSimulator } from "@/components/KprSimulator";
 import { ProjectHeroCarousel } from "@/components/ProjectHeroCarousel";
 import { WhatsappButton } from "@/components/WhatsappButton";
 import { getGlobals, getProject, getProjects } from "@/lib/cms";
@@ -43,9 +46,24 @@ export default async function ProjectPage({ params }) {
     brand: { "@type": "Organization", name: "Dayaprima" }
   };
 
+  const faqSchema = project.faqs?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: project.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: { "@type": "Answer", text: faq.answer }
+        }))
+      }
+    : null;
+
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      {faqSchema ? (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      ) : null}
       <ProjectHeroCarousel project={project} />
 
       <section className="container-x grid gap-10 py-14 lg:grid-cols-[1fr_380px]">
@@ -93,6 +111,15 @@ export default async function ProjectPage({ params }) {
             </div>
           </div>
 
+          <KprSimulator
+            priceText={project.houseTypes?.[0]?.price}
+            whatsapp={globals.whatsapp}
+            contextName={project.name}
+            interestRate={globals.kprInterestRate}
+            tenorYears={globals.kprTenorYears}
+            dpPercent={globals.kprDpPercent}
+          />
+
           <div>
             <h2 className="text-2xl font-semibold">Fasilitas Perumahan</h2>
             <div className="mt-5 flex flex-wrap gap-3">
@@ -124,14 +151,20 @@ export default async function ProjectPage({ params }) {
 
           <div>
             <h2 className="text-2xl font-semibold">Galeri Perumahan</h2>
-            <div className="mt-5 grid gap-4 sm:grid-cols-2">
-              {(project.gallery?.length ? project.gallery : [project.heroImage]).map((image, index) => (
-                <a key={image} href={image} className="relative aspect-[4/3] overflow-hidden rounded-md bg-white shadow-soft">
-                  <Image src={image} alt={`${project.name} gallery ${index + 1}`} fill className="object-cover transition hover:scale-105" />
-                </a>
-              ))}
+            <div className="mt-5">
+              <GalleryGrid
+                images={project.gallery?.length ? project.gallery : [project.heroImage]}
+                title={project.name}
+              />
             </div>
           </div>
+
+          {project.faqs?.length ? (
+            <div>
+              <h2 className="text-2xl font-semibold">Pertanyaan yang Sering Diajukan</h2>
+              <FaqAccordion faqs={project.faqs} />
+            </div>
+          ) : null}
 
           <div>
             <h2 className="flex items-center gap-2 text-2xl font-semibold"><MapPin /> Lokasi</h2>

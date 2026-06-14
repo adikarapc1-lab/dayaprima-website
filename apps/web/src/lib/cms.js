@@ -15,8 +15,15 @@ const PROJECT_POPULATE = [
   "populate[houseTypes][populate][floorPlanImage]=true",
   "populate[houseTypes][populate][gallery]=true",
   "populate[houseTypes][populate][features]=true",
-  "populate[facilities]=true"
+  "populate[facilities]=true",
+  "populate[faqs]=true"
 ].join("&");
+
+function normalizeFaqs(faqs) {
+  return (faqs || [])
+    .map((faq) => ({ question: faq.question, answer: faq.answer }))
+    .filter((faq) => faq.question && faq.answer);
+}
 
 function headers() {
   return API_TOKEN ? { Authorization: `Bearer ${API_TOKEN}` } : {};
@@ -105,7 +112,8 @@ export async function getProjects({ featured } = {}) {
       phone: project.promoPhone,
       address: project.promoAddress
     },
-    facilities: project.facilities?.map((facility) => facility.label || facility) || []
+    facilities: project.facilities?.map((facility) => facility.label || facility) || [],
+    faqs: normalizeFaqs(project.faqs)
   }));
 }
 
@@ -127,7 +135,8 @@ export async function getProject(slug) {
       phone: project.promoPhone,
       address: project.promoAddress
     },
-    facilities: project.facilities?.map((facility) => facility.label || facility) || []
+    facilities: project.facilities?.map((facility) => facility.label || facility) || [],
+    faqs: normalizeFaqs(project.faqs)
   };
 }
 

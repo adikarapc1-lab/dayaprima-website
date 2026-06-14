@@ -9,3 +9,7 @@ build
 dist
 .local
 *.log
+
+# Strapi local media uploads (regenerable via `npm run seed`; prod uses Cloudinary)
+apps/cms/public/uploads/*
+!apps/cms/public/uploads/.gitkeep

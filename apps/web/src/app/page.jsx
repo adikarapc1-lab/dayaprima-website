@@ -18,11 +18,11 @@ export default async function HomePage() {
       <section id="projects" className="container-x py-16">
         <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
-            <p className="text-sm font-semibold uppercase text-gold">Proyek Unggulan</p>
+            <p className="text-sm font-semibold uppercase text-gold">Perumahan Unggulan</p>
             <h2 className="mt-3 text-3xl font-semibold text-ink md:text-4xl">Pilihan hunian Dayaprima</h2>
           </div>
           <p className="max-w-xl text-sm leading-6 text-ink/65">
-            Semua proyek ditarik dari CMS sehingga tim admin dapat menambah unit, galeri, fasilitas, dan harga tanpa mengubah kode.
+            Semua perumahan ditarik dari CMS sehingga tim admin dapat menambah unit, galeri, fasilitas, dan harga tanpa mengubah kode.
           </p>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -36,11 +36,16 @@ export default async function HomePage() {
                 <h3 className="mt-3 text-2xl font-semibold">{project.name}</h3>
                 <p className="mt-3 text-sm leading-6 text-ink/65">{project.excerpt}</p>
                 <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-forest">
-                  Detail proyek <ArrowRight size={16} />
+                  Detail perumahan <ArrowRight size={16} />
                 </span>
               </div>
             </Link>
           ))}
+        </div>
+        <div className="mt-10 text-center">
+          <Link href="/perumahan" className="btn-secondary">
+            Lihat semua perumahan <ArrowRight size={16} />
+          </Link>
         </div>
       </section>
 
